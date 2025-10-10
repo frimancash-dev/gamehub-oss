@@ -178,11 +178,11 @@ See main report
 - Zero data going to the vendor or Chinese servers
 
 ### The Bad
-- My custom API server sees all your traffic (you have to trust me) or simply host it yourself
-- You won't get updates
+- My custom API server sees all your traffic (you have to trust me) **or simply host it yourself** using the repos listed above
+- You won't get updates from the vendor
 - Some features might break
 
-**Bottom line:** Only use this for personal privacy research. Don't share the modded APK.
+**Bottom line:** Only use this for personal privacy research. You can self-host all workers for complete privacy. Don't share the modded APK.
 
 ---
 
@@ -197,13 +197,42 @@ See main report
 
 ---
 
+## Required Repositories
+
+This project requires the following Cloudflare Worker repositories for full functionality:
+
+1. **[gamehub-worker](https://github.com/gamehublite/gamehub-worker)** - Main API proxy worker
+   - Handles all GameHub API requests
+   - Token replacement and signature regeneration
+   - Privacy features (IP protection, fingerprint sanitization)
+
+2. **[gamehub_api](https://github.com/gamehublite/gamehub_api)** - Static API resources
+   - Component manifests (Wine, Proton, DXVK, VKD3D)
+   - Game configurations and profiles
+   - Served via GitHub raw URLs
+
+3. **[gamehub-news](https://github.com/gamehublite/gamehub-news)** - News aggregator worker
+   - Aggregates gaming news from RSS feeds
+   - Tracks GitHub releases for emulation projects
+   - Custom HTML styling for mobile
+
+4. **[gamehub-login-token-grabber](https://github.com/gamehublite/gamehub-login-token-grabber)** - Token refresher worker
+   - Automated token refresh every 4 hours
+   - OTP-based authentication via Mail.tm
+   - Stores fresh tokens in KV storage
+
+**Note:** You can self-host your own instances of the whole GameHub app if you want to. Right now I am using a free Cloudflare Worker I created. Please don't misuse the project. The size of the APK is cut down to **47MB from 115MB**.
+
+---
+
 ## Analysis Metadata
 
 **Analysis Date:** October 7, 2025
 **Version:** 1.0
 **Total Analysis Size:** ~70MB
 **Documentation:** ~25,000 words
-**Original APK:** Official
+**Original APK Size:** 115MB
+**Modified APK Size:** 47MB (59% reduction)
 **Modified APK:** gamehub_lite.apk
 
 ---
@@ -219,9 +248,14 @@ See main report
 ### For Replication
 1. Follow the replication guide in the main report
 2. Set up tools (apktool, JDK, Android SDK)
-3. Deploy mock API server (see GAMEHUB_API_ANALYSIS.md)
-4. Follow step-by-step procedures
-5. Test thoroughly
+3. Deploy Cloudflare Workers from the required repositories (see above)
+   - Fork and deploy [gamehub-worker](https://github.com/gamehublite/gamehub-worker)
+   - Fork and deploy [gamehub-news](https://github.com/gamehublite/gamehub-news)
+   - Fork and deploy [gamehub-login-token-grabber](https://github.com/gamehublite/gamehub-login-token-grabber)
+   - Use [gamehub_api](https://github.com/gamehublite/gamehub_api) static files
+4. Update APK to point to your worker URLs
+5. Follow step-by-step procedures
+6. Test thoroughly
 
 ### For Research
 1. Analyze the SDK removal techniques
