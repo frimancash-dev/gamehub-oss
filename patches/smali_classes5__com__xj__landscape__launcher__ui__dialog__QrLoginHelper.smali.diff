@@ -1,0 +1,29 @@
+--- original/smali_classes5/com/xj/landscape/launcher/ui/dialog/QrLoginHelper.smali	2025-10-16 23:41:21
++++ lite/smali_classes5/com/xj/landscape/launcher/ui/dialog/QrLoginHelper.smali	2025-10-16 23:41:38
+@@ -374,7 +374,7 @@
+     invoke-static {p2}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+ 
+     :try_start_1
+-    const-string p2, "https://api.weixin.qq.com/sns/oauth2/access_token"
++    const-string p2, "http://127.0.0.1/sns/oauth2/access_token"
+ 
+     const/4 v2, 0x4
+ 
+@@ -642,7 +642,7 @@
+     invoke-static {v0}, Lkotlin/ResultKt;->b(Ljava/lang/Object;)V
+ 
+     :try_start_2
+-    const-string v0, "https://api.weixin.qq.com/cgi-bin/stable_token"
++    const-string v0, "http://127.0.0.1/cgi-bin/stable_token"
+ 
+     new-array v4, v7, [Lkotlin/Pair;
+ 
+@@ -757,7 +757,7 @@
+ 
+     invoke-static {v9, v5}, Lcom/xj/common/utils/XjLog;->c(Ljava/lang/String;Ljava/lang/String;)V
+ 
+-    const-string v5, "https://api.weixin.qq.com/cgi-bin/ticket/getticket"
++    const-string v5, "http://127.0.0.1/cgi-bin/ticket/getticket"
+ 
+     new-array v15, v11, [Lkotlin/Pair;
+ 

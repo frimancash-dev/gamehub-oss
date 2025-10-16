@@ -1,0 +1,20 @@
+--- original/apktool.yml	2025-10-16 23:41:30
++++ lite/apktool.yml	2025-10-16 23:41:40
+@@ -1,5 +1,5 @@
+ version: 2.12.1
+-apkFileName: GameHub_ORG.apk
++apkFileName: GameHub-Lite.apk
+ usesFramework:
+   ids:
+   - 1
+@@ -16,10 +16,8 @@
+ - gif
+ - jpg
+ - mp3
+-- mp4
+ - png
+ - wav
+-- webm
+ - webp
+ - assets/dexopt/baseline.prof
+ - assets/dexopt/baseline.profm

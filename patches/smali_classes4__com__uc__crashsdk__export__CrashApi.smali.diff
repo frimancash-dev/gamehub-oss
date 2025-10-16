@@ -1,0 +1,11 @@
+--- original/smali_classes4/com/uc/crashsdk/export/CrashApi.smali	2025-10-16 23:41:21
++++ lite/smali_classes4/com/uc/crashsdk/export/CrashApi.smali	2025-10-16 23:41:38
+@@ -8,7 +8,7 @@
+ 
+ .field private static c:Z = true
+ 
+-.field private static d:Z = false
++.field private static d:Z
+ 
+ 
+ # instance fields

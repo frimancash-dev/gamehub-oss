@@ -1,0 +1,11 @@
+--- original/smali_classes5/com/xj/mapping/view/GestureView.smali	2025-10-16 23:41:24
++++ lite/smali_classes5/com/xj/mapping/view/GestureView.smali	2025-10-16 23:41:39
+@@ -15,7 +15,7 @@
+ # static fields
+ .field public static w:Ljava/lang/String; = ""
+ 
+-.field public static x:Z = false
++.field public static x:Z
+ 
+ .field public static y:F
+ 

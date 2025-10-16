@@ -1,0 +1,11 @@
+--- original/smali_classes5/com/xj/landscape/launcher/ui/gamedetail/GameDetailActivity.smali	2025-10-16 23:41:21
++++ lite/smali_classes5/com/xj/landscape/launcher/ui/gamedetail/GameDetailActivity.smali	2025-10-16 23:41:38
+@@ -6657,7 +6657,7 @@
+ 
+     const-string v7, "type"
+ 
+-    const-string v8, ""
++    const-string v8, "0"
+ 
+     invoke-virtual {v5, v7, v8}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+ 

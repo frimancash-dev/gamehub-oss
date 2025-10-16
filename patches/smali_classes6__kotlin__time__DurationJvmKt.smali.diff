@@ -1,0 +1,11 @@
+--- original/smali_classes6/kotlin/time/DurationJvmKt.smali	2025-10-16 23:41:24
++++ lite/smali_classes6/kotlin/time/DurationJvmKt.smali	2025-10-16 23:41:37
+@@ -12,7 +12,7 @@
+ 
+ 
+ # static fields
+-.field public static final a:Z = false
++.field public static final a:Z
+ 
+ .field public static final b:[Ljava/lang/ThreadLocal;
+ 

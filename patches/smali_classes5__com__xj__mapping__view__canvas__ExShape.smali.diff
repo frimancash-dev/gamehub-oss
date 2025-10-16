@@ -1,0 +1,11 @@
+--- original/smali_classes5/com/xj/mapping/view/canvas/ExShape.smali	2025-10-16 23:41:24
++++ lite/smali_classes5/com/xj/mapping/view/canvas/ExShape.smali	2025-10-16 23:41:39
+@@ -4,7 +4,7 @@
+ 
+ 
+ # static fields
+-.field public static f:Z = false
++.field public static f:Z
+ 
+ 
+ # instance fields

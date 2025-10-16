@@ -1,0 +1,27 @@
+# Native libraries to remove (telemetry, analytics, WebRTC, unused streaming)
+lib/arm64-v8a/libalicomphonenumberauthsdk_core.so
+lib/arm64-v8a/libcrashsdk.so
+lib/arm64-v8a/libffmpeg-org.so
+lib/arm64-v8a/libijkffmpeg.so
+lib/arm64-v8a/libjingle_peerconnection_so.so
+lib/arm64-v8a/libstreaming-core.so
+lib/arm64-v8a/libpns-2.12.17-LogOnlineStandardCuxwRelease_alijtca_plus.so
+lib/arm64-v8a/librtmp-jni.so
+lib/arm64-v8a/libumeng-spy.so
+
+# Assets to remove (intro videos, fonts, scripts)
+assets/auth_intro_timberline.webm
+assets/auth_loop_timberline.webm
+assets/better-xcloud.user.js
+assets/NotoColorEmojiCompat.ttf
+assets/splash_video.mp4
+
+# Smali directories to remove completely (analytics, telemetry, Google services)
+smali_classes2/com/google/android/gms/measurement
+smali_classes2/com/google/android/gms/internal/firebase-auth-api
+smali_classes2/com/google/android/gms/internal/cast
+smali_classes2/com/google/android/gms/internal/measurement
+smali_classes2/com/google/android/gms/cast
+smali_classes3/com/google/android/recaptcha
+smali_classes3/com/google/firebase/auth
+smali_classes4/com/umeng/analytics

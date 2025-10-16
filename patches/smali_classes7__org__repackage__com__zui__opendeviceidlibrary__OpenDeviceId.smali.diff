@@ -1,0 +1,11 @@
+--- original/smali_classes7/org/repackage/com/zui/opendeviceidlibrary/OpenDeviceId.smali	2025-10-16 23:41:26
++++ lite/smali_classes7/org/repackage/com/zui/opendeviceidlibrary/OpenDeviceId.smali	2025-10-16 23:41:38
+@@ -14,7 +14,7 @@
+ # static fields
+ .field private static c:Ljava/lang/String; = "OpenDeviceId library"
+ 
+-.field private static d:Z = false
++.field private static d:Z
+ 
+ 
+ # instance fields

@@ -1,0 +1,448 @@
+--- original/smali_classes5/com/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog.smali	2025-10-16 23:41:23
++++ lite/smali_classes5/com/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog.smali	2025-10-16 23:41:39
+@@ -584,7 +584,7 @@
+ 
+     const/4 v6, 0x3
+ 
+-    const/4 v7, 0x5
++    const/4 v7, 0x2
+ 
+     const-string v8, "getString(...)"
+ 
+@@ -594,7 +594,7 @@
+ 
+     const/4 v11, 0x0
+ 
+-    if-ne v2, v4, :cond_6
++    if-ne v2, v4, :cond_2
+ 
+     sget-object v2, Lcom/xj/base/language/GHLocaleManager;->a:Lcom/xj/base/language/GHLocaleManager;
+ 
+@@ -611,125 +611,31 @@
+     move-result-object v3
+ 
+     new-array v4, v7, [Lcom/xj/common/view/popup/Option;
+-
+-    new-instance v7, Lcom/xj/common/view/popup/Option;
+-
+-    invoke-static {}, Lcom/blankj/utilcode/util/Utils;->a()Landroid/app/Application;
+-
+-    move-result-object v12
+-
+-    sget v13, Lcom/xj/language/R$string;->follow_system:I
+-
+-    invoke-virtual {v12, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+-
+-    move-result-object v13
+-
+-    invoke-static {v13, v8}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+-
+-    const-string v8, ""
+-
+-    if-eqz v3, :cond_0
+-
+-    invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+-    move-result-object v12
+-
+-    if-nez v12, :cond_1
+-
+-    :cond_0
+-    move-object v12, v8
+-
+-    :cond_1
+-    invoke-static {v12, v8}, Lcom/blankj/utilcode/util/StringUtils;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+ 
+-    move-result v14
+-
+-    new-instance v17, Lcom/xj/landscape/launcher/view/popup/z1;
+-
+-    invoke-direct/range {v17 .. v17}, Lcom/xj/landscape/launcher/view/popup/z1;-><init>()V
+-
+-    const/16 v18, 0xc
+-
+-    const/16 v19, 0x0
+-
+-    const/4 v15, 0x0
+-
+-    const/16 v16, 0x0
+-
+-    move-object v12, v7
+-
+-    invoke-direct/range {v12 .. v19}, Lcom/xj/common/view/popup/Option;-><init>(Ljava/lang/String;ZIILkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    aput-object v7, v4, v11
+-
+     new-instance v7, Lcom/xj/common/view/popup/Option;
+ 
+     const/4 v8, 0x0
+ 
+-    if-eqz v3, :cond_2
++    if-eqz v3, :cond_0
+ 
+     invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+ 
+-    move-result-object v11
++    move-result-object v9
+ 
+     goto :goto_0
+ 
+-    :cond_2
+-    move-object v11, v8
++    :cond_0
++    move-object v9, v8
+ 
+     :goto_0
+-    sget-object v12, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
+-
+-    invoke-virtual {v12}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+-    move-result-object v12
++    sget-object v10, Ljava/util/Locale;->US:Ljava/util/Locale;
+ 
+-    invoke-static {v11, v12}, Lcom/blankj/utilcode/util/StringUtils;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
++    invoke-virtual {v10}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+ 
+-    move-result v22
+-
+-    new-instance v25, Lcom/xj/landscape/launcher/view/popup/k2;
+-
+-    invoke-direct/range {v25 .. v25}, Lcom/xj/landscape/launcher/view/popup/k2;-><init>()V
+-
+-    const/16 v26, 0xc
+-
+-    const/16 v27, 0x0
+-
+-    const-string v21, "\u7b80\u4f53\u4e2d\u6587"
+-
+-    const/16 v23, 0x0
+-
+-    const/16 v24, 0x0
+-
+-    move-object/from16 v20, v7
+-
+-    invoke-direct/range {v20 .. v27}, Lcom/xj/common/view/popup/Option;-><init>(Ljava/lang/String;ZIILkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    aput-object v7, v4, v10
+-
+-    new-instance v7, Lcom/xj/common/view/popup/Option;
+-
+-    if-eqz v3, :cond_3
+-
+-    invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+     move-result-object v10
+ 
+-    goto :goto_1
++    invoke-static {v9, v10}, Lcom/blankj/utilcode/util/StringUtils;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+ 
+-    :cond_3
+-    move-object v10, v8
+-
+-    :goto_1
+-    sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
+-
+-    invoke-virtual {v11}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+-    move-result-object v11
+-
+-    invoke-static {v10, v11}, Lcom/blankj/utilcode/util/StringUtils;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+-
+     move-result v13
+ 
+     new-instance v16, Lcom/xj/landscape/launcher/view/popup/l2;
+@@ -750,22 +656,24 @@
+ 
+     invoke-direct/range {v11 .. v18}, Lcom/xj/common/view/popup/Option;-><init>(Ljava/lang/String;ZIILkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+ 
++    const/4 v9, 0x0
++
+     aput-object v7, v4, v9
+ 
+     new-instance v7, Lcom/xj/common/view/popup/Option;
+ 
+-    if-eqz v3, :cond_4
++    if-eqz v3, :cond_1
+ 
+     invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+ 
+     move-result-object v9
+ 
+-    goto :goto_2
++    goto :goto_1
+ 
+-    :cond_4
++    :cond_1
+     move-object v9, v8
+ 
+-    :goto_2
++    :goto_1
+     sget-object v10, Ljava/util/Locale;->JAPAN:Ljava/util/Locale;
+ 
+     invoke-virtual {v10}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+@@ -794,63 +702,24 @@
+ 
+     invoke-direct/range {v19 .. v26}, Lcom/xj/common/view/popup/Option;-><init>(Ljava/lang/String;ZIILkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+ 
+-    aput-object v7, v4, v6
++    const/4 v9, 0x1
+ 
+-    new-instance v6, Lcom/xj/common/view/popup/Option;
+-
+-    if-eqz v3, :cond_5
+-
+-    invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+-    move-result-object v8
+-
+-    :cond_5
+-    invoke-virtual {v2}, Lcom/xj/base/language/GHLocaleManager;->j()Ljava/util/Locale;
++    aput-object v7, v4, v9
+ 
+-    move-result-object v2
+-
+-    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+-
+-    move-result-object v2
+-
+-    invoke-static {v8, v2}, Lcom/blankj/utilcode/util/StringUtils;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+-
+-    move-result v11
+-
+-    new-instance v14, Lcom/xj/landscape/launcher/view/popup/n2;
+-
+-    invoke-direct {v14}, Lcom/xj/landscape/launcher/view/popup/n2;-><init>()V
+-
+-    const/16 v15, 0xc
+-
+-    const/16 v16, 0x0
+-
+-    const-string v10, "\u0440\u0443\u0441\u0441\u043a\u0438\u0439"
+-
+-    const/4 v12, 0x0
+-
+-    const/4 v13, 0x0
+-
+-    move-object v9, v6
+-
+-    invoke-direct/range {v9 .. v16}, Lcom/xj/common/view/popup/Option;-><init>(Ljava/lang/String;ZIILkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+-
+-    aput-object v6, v4, v5
+-
+     invoke-static {v4}, Lkotlin/collections/CollectionsKt;->p([Ljava/lang/Object;)Ljava/util/List;
+ 
+     move-result-object v2
+ 
+-    goto/16 :goto_a
++    goto/16 :goto_9
+ 
+-    :cond_6
++    :cond_2
+     invoke-virtual {v3}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_FPS()I
+ 
+     move-result v4
+ 
+     const-string v12, "ScreenRecordVideoConfig"
+ 
+-    if-ne v2, v4, :cond_7
++    if-ne v2, v4, :cond_3
+ 
+     invoke-static {v12}, Lcom/blankj/utilcode/util/SPUtils;->g(Ljava/lang/String;)Lcom/blankj/utilcode/util/SPUtils;
+ 
+@@ -948,14 +817,14 @@
+ 
+     move-result-object v2
+ 
+-    goto/16 :goto_a
++    goto/16 :goto_9
+ 
+-    :cond_7
++    :cond_3
+     invoke-virtual {v3}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_TYPE()I
+ 
+     move-result v4
+ 
+-    if-ne v2, v4, :cond_a
++    if-ne v2, v4, :cond_6
+ 
+     invoke-static {v12}, Lcom/blankj/utilcode/util/SPUtils;->g(Ljava/lang/String;)Lcom/blankj/utilcode/util/SPUtils;
+ 
+@@ -983,16 +852,16 @@
+ 
+     invoke-static {v13, v8}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    if-ne v2, v7, :cond_8
++    if-ne v2, v7, :cond_4
+ 
+     move v14, v10
+ 
+-    goto :goto_3
++    goto :goto_2
+ 
+-    :cond_8
++    :cond_4
+     move v14, v11
+ 
+-    :goto_3
++    :goto_2
+     new-instance v5, Lcom/xj/landscape/launcher/view/popup/d2;
+ 
+     invoke-direct {v5, v0}, Lcom/xj/landscape/launcher/view/popup/d2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1027,16 +896,16 @@
+ 
+     invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    if-ne v2, v9, :cond_9
++    if-ne v2, v9, :cond_5
+ 
+     move/from16 v22, v10
+ 
+-    goto :goto_4
++    goto :goto_3
+ 
+-    :cond_9
++    :cond_5
+     move/from16 v22, v11
+ 
+-    :goto_4
++    :goto_3
+     new-instance v2, Lcom/xj/landscape/launcher/view/popup/e2;
+ 
+     invoke-direct {v2, v0}, Lcom/xj/landscape/launcher/view/popup/e2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1063,14 +932,14 @@
+ 
+     move-result-object v2
+ 
+-    goto/16 :goto_a
++    goto/16 :goto_9
+ 
+-    :cond_a
++    :cond_6
+     invoke-virtual {v3}, Lcom/xj/landscape/launcher/data/model/entity/SettingItemEntity$Companion;->getCONTENT_TYPE_RECODE_BIT()I
+ 
+     move-result v3
+ 
+-    if-ne v2, v3, :cond_10
++    if-ne v2, v3, :cond_c
+ 
+     invoke-static {v12}, Lcom/blankj/utilcode/util/SPUtils;->g(Ljava/lang/String;)Lcom/blankj/utilcode/util/SPUtils;
+ 
+@@ -1100,16 +969,16 @@
+ 
+     invoke-static {v13, v8}, Lkotlin/jvm/internal/Intrinsics;->f(Ljava/lang/Object;Ljava/lang/String;)V
+ 
+-    if-ne v2, v4, :cond_b
++    if-ne v2, v4, :cond_7
+ 
+     move v14, v10
+ 
+-    goto :goto_5
++    goto :goto_4
+ 
+-    :cond_b
++    :cond_7
+     move v14, v11
+ 
+-    :goto_5
++    :goto_4
+     new-instance v4, Lcom/xj/landscape/launcher/view/popup/f2;
+ 
+     invoke-direct {v4, v0}, Lcom/xj/landscape/launcher/view/popup/f2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1134,16 +1003,16 @@
+ 
+     const v7, 0x16e3600
+ 
+-    if-ne v2, v7, :cond_c
++    if-ne v2, v7, :cond_8
+ 
+     move/from16 v22, v10
+ 
+-    goto :goto_6
++    goto :goto_5
+ 
+-    :cond_c
++    :cond_8
+     move/from16 v22, v11
+ 
+-    :goto_6
++    :goto_5
+     new-instance v7, Lcom/xj/landscape/launcher/view/popup/g2;
+ 
+     invoke-direct {v7, v0}, Lcom/xj/landscape/launcher/view/popup/g2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1170,16 +1039,16 @@
+ 
+     const v7, 0x1312d00
+ 
+-    if-ne v2, v7, :cond_d
++    if-ne v2, v7, :cond_9
+ 
+     move v14, v10
+ 
+-    goto :goto_7
++    goto :goto_6
+ 
+-    :cond_d
++    :cond_9
+     move v14, v11
+ 
+-    :goto_7
++    :goto_6
+     new-instance v7, Lcom/xj/landscape/launcher/view/popup/h2;
+ 
+     invoke-direct {v7, v0}, Lcom/xj/landscape/launcher/view/popup/h2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1206,16 +1075,16 @@
+ 
+     const v7, 0xf42400
+ 
+-    if-ne v2, v7, :cond_e
++    if-ne v2, v7, :cond_a
+ 
+     move/from16 v22, v10
+ 
+-    goto :goto_8
++    goto :goto_7
+ 
+-    :cond_e
++    :cond_a
+     move/from16 v22, v11
+ 
+-    :goto_8
++    :goto_7
+     new-instance v7, Lcom/xj/landscape/launcher/view/popup/i2;
+ 
+     invoke-direct {v7, v0}, Lcom/xj/landscape/launcher/view/popup/i2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1242,16 +1111,16 @@
+ 
+     const v6, 0x989680
+ 
+-    if-ne v2, v6, :cond_f
++    if-ne v2, v6, :cond_b
+ 
+     move v14, v10
+ 
+-    goto :goto_9
++    goto :goto_8
+ 
+-    :cond_f
++    :cond_b
+     move v14, v11
+ 
+-    :goto_9
++    :goto_8
+     new-instance v2, Lcom/xj/landscape/launcher/view/popup/j2;
+ 
+     invoke-direct {v2, v0}, Lcom/xj/landscape/launcher/view/popup/j2;-><init>(Lcom/xj/landscape/launcher/view/popup/SelectAndSingleInputDialog;)V
+@@ -1278,11 +1147,11 @@
+ 
+     move-result-object v2
+ 
+-    :goto_a
++    :goto_9
+     sget-object v3, Lcom/xj/common/view/popup/OptionsPopup;->m:Lcom/xj/common/view/popup/OptionsPopup$Companion;
+ 
+     invoke-virtual {v3, v1, v2}, Lcom/xj/common/view/popup/OptionsPopup$Companion;->b(Landroid/view/View;Ljava/util/List;)V
+ 
+-    :cond_10
++    :cond_c
+     return-void
+ .end method

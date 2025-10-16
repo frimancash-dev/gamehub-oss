@@ -1,0 +1,20 @@
+--- original/smali_classes4/com/xj/base/language/GHLocaleManager.smali	2025-10-16 23:41:23
++++ lite/smali_classes4/com/xj/base/language/GHLocaleManager.smali	2025-10-16 23:41:39
+@@ -529,15 +529,9 @@
+ .end method
+ 
+ .method public final j()Ljava/util/Locale;
+-    .locals 3
+-
+-    new-instance v0, Ljava/util/Locale;
+-
+-    const-string v1, "ru"
+-
+-    const-string v2, "RU"
++    .locals 1
+ 
+-    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
++    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+ 
+     return-object v0
+ .end method

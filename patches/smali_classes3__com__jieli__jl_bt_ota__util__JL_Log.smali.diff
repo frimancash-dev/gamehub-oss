@@ -1,0 +1,11 @@
+--- original/smali_classes3/com/jieli/jl_bt_ota/util/JL_Log.smali	2025-10-16 23:41:25
++++ lite/smali_classes3/com/jieli/jl_bt_ota/util/JL_Log.smali	2025-10-16 23:41:37
+@@ -15,7 +15,7 @@
+ # static fields
+ .field public static a:Z = true
+ 
+-.field public static b:Z = false
++.field public static b:Z
+ 
+ .field public static c:Ljava/lang/String;
+ 

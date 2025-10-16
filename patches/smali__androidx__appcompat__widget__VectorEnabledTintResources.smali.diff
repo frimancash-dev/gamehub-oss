@@ -1,0 +1,11 @@
+--- original/smali/androidx/appcompat/widget/VectorEnabledTintResources.smali	2025-10-16 23:41:20
++++ lite/smali/androidx/appcompat/widget/VectorEnabledTintResources.smali	2025-10-16 23:41:32
+@@ -9,7 +9,7 @@
+ 
+ 
+ # static fields
+-.field public static c:Z = false
++.field public static c:Z
+ 
+ 
+ # instance fields

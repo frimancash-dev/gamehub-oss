@@ -1,0 +1,11 @@
+--- original/smali/androidx/recyclerview/widget/DefaultItemAnimator.smali	2025-10-16 23:41:27
++++ lite/smali/androidx/recyclerview/widget/DefaultItemAnimator.smali	2025-10-16 23:41:39
+@@ -13,7 +13,7 @@
+ 
+ 
+ # static fields
+-.field private static final DEBUG:Z = false
++.field private static final DEBUG:Z
+ 
+ .field private static sDefaultInterpolator:Landroid/animation/TimeInterpolator;
+ 

@@ -1,0 +1,11 @@
+--- original/smali_classes4/com/xiaoji/module/operations/utility/Log.smali	2025-10-16 23:41:23
++++ lite/smali_classes4/com/xiaoji/module/operations/utility/Log.smali	2025-10-16 23:41:38
+@@ -4,7 +4,7 @@
+ 
+ 
+ # static fields
+-.field public static b:Z = false
++.field public static b:Z
+ 
+ .field public static c:Lcom/xiaoji/module/operations/utility/Log;
+ 

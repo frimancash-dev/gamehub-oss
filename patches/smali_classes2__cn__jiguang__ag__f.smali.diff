@@ -1,0 +1,22 @@
+--- original/smali_classes2/cn/jiguang/ag/f.smali	2025-10-16 23:41:19
++++ lite/smali_classes2/cn/jiguang/ag/f.smali	2025-10-16 23:41:32
+@@ -1,13 +1,13 @@
+-.class public abstract synthetic Lcn/jiguang/ag/f;
++.class public Lcn/jiguang/ag/f;
+ .super Ljava/lang/Object;
+-.source "SourceFile"
++.source "JPushStub"
+ 
+ 
+ # direct methods
+-.method public static bridge synthetic a(Ljava/lang/Object;)Z
+-    .locals 0
++.method public static a(Ljava/lang/Object;)Z
++    .locals 1
+ 
+-    instance-of p0, p0, Landroid/telephony/CellInfoTdscdma;
++    const/4 v0, 0x0
+ 
+-    return p0
++    return v0
+ .end method

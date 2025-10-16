@@ -1,0 +1,17 @@
+--- original/smali/androidx/core/view/ViewCompat.smali	2025-10-16 23:41:22
++++ lite/smali/androidx/core/view/ViewCompat.smali	2025-10-16 23:41:35
+@@ -37,11 +37,11 @@
+ 
+ 
+ # static fields
+-.field public static a:Ljava/util/WeakHashMap; = null
++.field public static a:Ljava/util/WeakHashMap;
+ 
+-.field public static b:Ljava/lang/reflect/Field; = null
++.field public static b:Ljava/lang/reflect/Field;
+ 
+-.field public static c:Z = false
++.field public static c:Z
+ 
+ .field public static final d:[I
+ 

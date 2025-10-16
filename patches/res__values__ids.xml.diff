@@ -1,0 +1,8 @@
+--- original/res/values/ids.xml	2025-10-16 23:41:26
++++ lite/res/values/ids.xml	2025-10-16 23:41:39
+@@ -3338,4 +3338,5 @@
+     <item type="id" name="xy_together_max" />
+     <item type="id" name="yesTv" />
+     <item type="id" name="zh_bgImage" />
++    <item type="id" name="tv_dashboard_label" />
+ </resources>

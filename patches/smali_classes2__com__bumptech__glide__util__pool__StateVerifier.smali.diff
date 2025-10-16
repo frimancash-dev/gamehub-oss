@@ -1,0 +1,11 @@
+--- original/smali_classes2/com/bumptech/glide/util/pool/StateVerifier.smali	2025-10-16 23:41:22
++++ lite/smali_classes2/com/bumptech/glide/util/pool/StateVerifier.smali	2025-10-16 23:41:34
+@@ -13,7 +13,7 @@
+ 
+ 
+ # static fields
+-.field private static final DEBUG:Z = false
++.field private static final DEBUG:Z
+ 
+ 
+ # direct methods

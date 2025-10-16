@@ -1,0 +1,13 @@
+--- original/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherAppKt.smali	2025-10-16 23:41:18
++++ lite/smali_classes5/com/xj/landscape/launcher/LandscapeLauncherAppKt.smali	2025-10-16 23:41:36
+@@ -51,10 +51,6 @@
+     check-cast v3, Landroid/app/Application;
+ 
+     invoke-virtual {v2, v3, v1}, Lando/file/core/FileOperator;->d(Landroid/app/Application;Z)V
+-
+-    sget-object v2, Lcom/coder/ffmpeg/jni/FFmpegConfig;->Companion:Lcom/coder/ffmpeg/jni/FFmpegConfig$Companion;
+-
+-    invoke-virtual {v2, v1}, Lcom/coder/ffmpeg/jni/FFmpegConfig$Companion;->setDebug(Z)V
+ 
+     sget-object v2, Landroidx/lifecycle/ProcessLifecycleOwner;->i:Landroidx/lifecycle/ProcessLifecycleOwner$Companion;
+ 

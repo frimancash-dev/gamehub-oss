@@ -1,0 +1,11 @@
+--- original/smali/androidx/core/view/WindowInsetsCompat$Impl20.smali	2025-10-16 23:41:22
++++ lite/smali/androidx/core/view/WindowInsetsCompat$Impl20.smali	2025-10-16 23:41:35
+@@ -18,7 +18,7 @@
+ 
+ 
+ # static fields
+-.field public static h:Z = false
++.field public static h:Z
+ 
+ .field public static i:Ljava/lang/reflect/Method;
+ 

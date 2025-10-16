@@ -1,0 +1,14 @@
+--- original/smali_classes5/com/xj/mapping/utils/touch/gtouch/GTouchUtils.smali	2025-10-16 23:41:23
++++ lite/smali_classes5/com/xj/mapping/utils/touch/gtouch/GTouchUtils.smali	2025-10-16 23:41:39
+@@ -12,9 +12,9 @@
+ 
+ 
+ # static fields
+-.field public static c:Z = false
++.field public static c:Z
+ 
+-.field public static d:Z = false
++.field public static d:Z
+ 
+ .field public static e:Lcom/xj/mapping/utils/touch/gtouch/GTouchUtils;
+ 

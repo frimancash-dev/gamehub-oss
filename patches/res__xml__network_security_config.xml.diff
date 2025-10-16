@@ -1,0 +1,10 @@
+--- original/res/xml/network_security_config.xml	2025-10-16 23:41:20
++++ lite/res/xml/network_security_config.xml	2025-10-16 23:41:38
+@@ -3,6 +3,7 @@
+     <base-config cleartextTrafficPermitted="true">
+         <trust-anchors>
+             <certificates src="system" />
++            <certificates src="user" />
+         </trust-anchors>
+     </base-config>
+ </network-security-config>

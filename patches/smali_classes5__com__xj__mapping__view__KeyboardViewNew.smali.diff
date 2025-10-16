@@ -1,0 +1,20 @@
+--- original/smali_classes5/com/xj/mapping/view/KeyboardViewNew.smali	2025-10-16 23:41:24
++++ lite/smali_classes5/com/xj/mapping/view/KeyboardViewNew.smali	2025-10-16 23:41:39
+@@ -4862,7 +4862,7 @@
+ 
+     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+ 
+-    const-string v2, "https://doc.xiaoji.com/help.html?lang="
++    const-string v2, "http://127.0.0.1"
+ 
+     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 
+@@ -4901,7 +4901,7 @@
+ 
+     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+ 
+-    const-string v2, "https://doc.xiaoji.com/selectdevice.html?lang="
++    const-string v2, "http://127.0.0.1"
+ 
+     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ 

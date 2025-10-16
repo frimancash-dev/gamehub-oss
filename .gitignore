@@ -1,0 +1,42 @@
+# Large APK files (user must provide their own)
+*.apk
+!lite_resources/**
+
+# Temporary working directories
+work_temp/
+apk_compare/
+test_patch/
+smali_classes10_new/
+
+# Analysis output (can be regenerated)
+analysis_output/
+
+# Keystore (security - user should generate their own)
+*.keystore
+
+# Logs
+*.log
+
+# APK signing artifacts
+*.idsig
+*.apk.idsig
+
+# Backup files
+*.bak
+*.backup
+
+# Test/debug files
+modified_files.txt
+SESSION_CONTEXT.md
+
+# Script files (if they're one-time use)
+generate_patches.sh
+analyze_complete_diff.sh
+
+# macOS
+.DS_Store
+._*
+
+# Other temporary files
+*.tmp
+*.temp
